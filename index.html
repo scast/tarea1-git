@@ -187,46 +187,52 @@
             <tbody>
               <tr>
                 <th scope="row">working dir</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">index</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>R/W</td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">local repo</th>
+                <td>R</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td>W</td>
                 <td></td>
+                <td>W</td>
+              </tr>
+              <tr>
+                <th scope="row">index</th>
+                <td>R*</td>
+                <td></td>
+                <td>W</td>
+                <td>R/W</td>
                 <td></td>
                 <td></td>
+                <td>W*</td>
+              </tr>
+              <tr>
+                <th scope="row">local repo</th>
+                <td>R*</td>
+                <td>W</td>
+                <td></td>
+                <td>W</td>
+                <td>W</td>
+                <td>R</td>
+                <td>R*</td>
               </tr>
               <tr>
                 <th scope="row">remote repo</th>
                 <td></td>
+                <td>R</td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>R</td>
+                <td>W</td>
                 <td></td>
               </tr>
             </tbody>
           </table>
+          * denota que dependiendo de los parámetros el comando puede
+          leer/escribir de alguna de las filas demarcadas con el
+          asterisco. Por ejemplo, <code>git diff</code> solo muestra
+          diferencias en los archivos del working directory que no
+          están en el index pero con un parámetro muestra las
+          diferencias del workspace con el commit especificado.
         </div>
       </article>
 
