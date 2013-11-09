@@ -11,7 +11,7 @@
 
     <title>DevLabs USB - Tarea 1</title>
 
-    <link href="//fonts.googleapis.com/css?family=Ubuntu|Open+Sans" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Ubuntu|Open+Sans:400,700" rel="stylesheet" type="text/css">
     <link type="text/css" rel="stylesheet" media="all" href="screen.css" />
   </head>
   <body>
@@ -120,7 +120,44 @@
           repo', 'dirty working tree' y 'merge conflict'.
         </h3>
         <div class="answer">
-          Coloca tus respuestas aquí.
+          <dl>
+            <dt><dfn>Working directory</dfn></dt>
+            <dd>Básicamente es donde se encuentra la carpeta .git. Es
+            la carpeta que obtienes despues del git clone o del git
+            init.</dd>
+            <dt><dfn>Index</dfn></dt>
+            <dd>Donde se van agregando los cambios que se van a
+            guardar (commit). Es el staging area previo al
+            commit.</dd>
+            <dt><dfn>Local Repo</dfn></dt>
+            <dd>Es tu copia local de un repositorio. Es totalmente
+            independiente de cualquier otro repositorio.</dd>
+            <dt><dfn>Remote Repo</dfn></dt>
+            <dd>Es un repositorio git remoto, para alguna definición
+            de remoto que dependiendo del caso podría ser alguna de:
+            un repositorio git en otra carpeta en mi misma
+            computadora, en otra computadora en mi misma red, un
+            repositorio en la India, cualquier repositorio git no
+            igual a mi local repo. Ver <code>git remote</code>.</dd>
+
+            <dt><dfn>Dirty Working Tree</dfn></dt>
+            <dd>Es cuando existen cambios locales que no han sido
+            commiteados.</dd>
+
+            <dt><dfn>Merge conflict</dfn></dt>
+            <dd>Es lo que ocurre cuando git no puede automáticamente
+            realizar el merge de un archivo proveniente de dos
+            branches diferentes. <strong>Ejemplo: </strong> al hacer
+            merge de un feature branch sobre master puede que haya
+            archivos donde git no sea capaz de realizar el merge
+            automáticamente y necesite <em>ayuda</em> para decidir que
+            hacer. Esto suele ocurrir cuando el desarrollo sobre
+            master siguió su rumbo y se realizaron cambios en alguno
+            de los mismos archivos que el feature branch está tratando
+            de merge. Ver pregunta 1.</dd>
+
+          </dl>
+
         </div>
       </article>
       <article id="q4">
